@@ -1,0 +1,1 @@
+{"data": [{"id": 30875, "col": "s", "translate": "as\u00ed"}, {"id": 30876, "col": "o", "translate": "en la forma indicada; (&#39;As\u00ed pues&#39; es una variante no est\u00e1ndar)"}]}
