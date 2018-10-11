@@ -1,28 +1,29 @@
 import json
 import time
 
-cont  = 0
-contNrTranslte  = 0
-limitToSave = 15877
-lastContextTranslate = ''
-lastContext = ''
-newData = {}
-newData['data'] = []
 
 #leyendo el json
-with open('../Respaldos/translateV8.txt') as json_file:  
-    data = json.load(json_file)
-    print('First')
-    print(data['data'][0]['id'])
-    print(data['data'][0]['col'])
-    print(data['data'][0]['translate'])
 
-    lng = len(data['data'])
-    print('\nLast: ', lng)
-    lng = lng - 1
-    print(data['data'][lng]['id'])
-    print(data['data'][lng]['col'])
-    print(data['data'][lng]['translate'])
+nroFile = 1
+
+while nroFile < 35: #charlie empieza desde 25-28 // last file large: 160379 id
+    nameFile = 'translateV' + str(nroFile)
+    nroFile = nroFile + 1
+    fileToOpen = '../Respaldos/'+nameFile+'.txt'
+    with open(fileToOpen) as json_file:  
+        data = json.load(json_file)
+        print('->\t',nameFile, '\nFirst')
+        print(data['data'][0]['id'])
+        print(data['data'][0]['col'])
+        print(data['data'][0]['translate'])
+
+        lng = len(data['data'])
+        print('\nLast: ')
+        lng = lng - 1
+        print(data['data'][lng]['id'])
+        print(data['data'][lng]['col'])
+        print(data['data'][lng]['translate'])
+        print('\n\n\n')
 
     '''
                               id        translate
@@ -53,14 +54,5 @@ with open('../Respaldos/translateV8.txt') as json_file:
     
     '''
 
-    '''
-    for p in data['data']:
-        print(p['id'])
-        print(p['col'])
-        print(p['translate'])
-        print('\t\t>> row data nro: ', cont)
-        
-        
-        cont = cont + 1'''
         
 

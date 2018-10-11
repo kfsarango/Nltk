@@ -124,3 +124,6 @@ with open('src/dataWorNet.txt') as json_file:
           savingData(newData, nameFile, cont)
           print('\nOps! Something is wrong or has been interrupted\nSaving Data\nSALIENDO...')
 
+    print('saliendo')
+    savingData(newData, nameFile, cont)
+    print('guardando data')
